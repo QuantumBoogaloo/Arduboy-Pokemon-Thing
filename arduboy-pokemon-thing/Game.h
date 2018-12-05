@@ -3,6 +3,7 @@
 
 class Game
 {
-	private:
-	public:
+private:
+	Arduboy2 arduboy;
+public:
 };
