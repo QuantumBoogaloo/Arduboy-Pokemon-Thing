@@ -6,4 +6,5 @@ class Game
 private:
 	Arduboy2 arduboy;
 public:
+	void Begin();
 };
