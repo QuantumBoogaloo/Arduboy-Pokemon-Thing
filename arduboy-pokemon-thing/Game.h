@@ -7,4 +7,5 @@ private:
 	Arduboy2 arduboy;
 public:
 	void Begin();
+	void Run();
 };
