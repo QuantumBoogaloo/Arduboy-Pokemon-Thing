@@ -1,11 +1,11 @@
 #include "Game.h"
 
-void Game::Begin()
+void Game::setup()
 {
 	arduboy.begin();
 }
 
-void Game::Run()
+void Game::loop()
 {
 	
 }

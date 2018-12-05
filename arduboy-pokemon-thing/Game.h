@@ -6,6 +6,6 @@ class Game
 private:
 	Arduboy2 arduboy;
 public:
-	void Begin();
-	void Run();
+	void setup();
+	void loop();
 };

@@ -1,10 +1,12 @@
 #include "Game.h"
 Game game = Game();
 
-void setup() {
-	game.Begin();
+void setup()
+{
+	game.setup();
 }
 
-void loop() {
-	game.Run();
+void loop() 
+{
+	game.loop();
 }
