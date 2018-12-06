@@ -5,6 +5,9 @@
 #include "GameStateType.h"
 #include "GameState.h"
 
+#include "MainMenuState.h"
+#include "StartupState.h"
+
 class Game
 {
 private:
