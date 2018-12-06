@@ -11,8 +11,6 @@ private:
 	Arduboy2 arduboy;
 	
 	Stack<GameState, 4> stateStack;
-	
-	GameState StateConstruct(const GameStateType state);
 public:
 	void setup();
 	void loop();

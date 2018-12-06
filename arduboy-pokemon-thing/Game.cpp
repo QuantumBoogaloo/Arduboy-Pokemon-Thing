@@ -13,16 +13,6 @@ void Game::loop()
 
 
 //States
-GameState Game::StateConstruct(const GameStateType state)
-{
-	switch(state)
-	{
-		default:
-			return GameState();
-		break;
-	}
-}
-
 void Game::StateChange(const GameStateType stateNext)
 {
 	this->stateStack.clear();
