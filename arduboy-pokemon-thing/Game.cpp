@@ -26,5 +26,23 @@ void Game::PopState()
 
 void Game::PushState(const GameStateType stateNew)
 {
-	this->stateStack.push(StateConstruct(stateNew));
+	/*
+	to:do : determine if this is this safe
+	*/
+	
+	GameState state;
+	
+	switch(stateNew)
+	{
+		case GameStateType::Menu:
+			state = MainMenuState();
+		break;
+		
+		case GameStateType::Startup:	//default case incase something catastrophic happens
+		default:
+			state = StartupState();
+		break;
+	}
+	
+	this->stateStack.push(state);
 }
