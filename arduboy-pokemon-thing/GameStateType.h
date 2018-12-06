@@ -2,7 +2,7 @@
 
 enum class GameStateType : uint8_t
 {
-	IntroScreen,
+	Startup,
 	Menu,
 	Overworld,
 	Battle,
