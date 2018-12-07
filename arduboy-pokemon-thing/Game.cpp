@@ -13,18 +13,18 @@ void Game::loop()
 
 
 //States
-void Game::StateChange(const GameStateType stateNext)
+void Game::stateChange(const GameStateType stateNext)
 {
 	this->stateStack.clear();
-	PushState(stateNext);
+	pushState(stateNext);
 }
 
-void Game::PopState()
+void Game::popState()
 {
 	this->stateStack.drop();
 }
 
-void Game::PushState(const GameStateType stateNew)
+void Game::pushState(const GameStateType stateNew)
 {
 	/*
 	to:do : determine if this is this safe
