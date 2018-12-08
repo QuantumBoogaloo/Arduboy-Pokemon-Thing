@@ -18,7 +18,7 @@ public:
 	void setup();
 	void loop();
 	
-	void stateChange(const GameStateType stateNext);	//kills entire stack and replaces position 0
-	void statePush(const GameStateType stateNew);		//adds to stack
+	void statePush(const GameStateType stateNew);
 	void stateDrop();
+	void stateDropAll();
 };

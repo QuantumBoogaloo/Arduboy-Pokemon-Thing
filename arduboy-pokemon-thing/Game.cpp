@@ -10,14 +10,11 @@ void Game::loop()
 	
 }
 
-
-
 //States
-void Game::stateChange(const GameStateType stateNext)
+void Game::stateDropAll()
 {
 	while(!this->stateStack.isEmpty())
 		stateDrop();
-	statePush(stateNext);
 }
 
 void Game::stateDrop()
