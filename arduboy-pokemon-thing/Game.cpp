@@ -7,7 +7,11 @@ void Game::setup()
 
 void Game::loop()
 {
+	if(!arduboy.nextFrame())
+		return;
 	
+	
+	arduboy.display();
 }
 
 //States
