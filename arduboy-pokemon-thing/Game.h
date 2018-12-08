@@ -13,7 +13,7 @@ class Game
 private:
 	Arduboy2 arduboy;
 	
-	Stack< GameState, 4> stateStack;
+	Stack< GameState *, 4> stateStack;
 public:
 	void setup();
 	void loop();

@@ -15,32 +15,32 @@ void Game::loop()
 //States
 void Game::stateChange(const GameStateType stateNext)
 {
-	this->stateStack.clear();
-	pushState(stateNext);
+	while(!this->stateStack.isEmpty())
+		stateDrop();
+	statePush(stateNext);
 }
 
 void Game::stateDrop()
 {
+	if(this->stateStack.isEmpty())
+		return;
+	delete this->stateStack[this->stateStack.getCount() - 1];
 	this->stateStack.drop();
 }
 
 void Game::statePush(const GameStateType stateNew)
 {
-	/*
-	to:do : determine if this is this safe
-	*/
-	
-	GameState state;
+	GameState * state = nullptr;
 	
 	switch(stateNew)
 	{
 		case GameStateType::Menu:
-			state = MainMenuState();
+			state = new MainMenuState();
 		break;
 		
 		case GameStateType::Startup:	//default case incase something catastrophic happens
 		default:
-			state = StartupState();
+			state = new StartupState();
 		break;
 	}
 	
