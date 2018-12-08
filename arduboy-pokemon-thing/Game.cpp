@@ -19,12 +19,12 @@ void Game::stateChange(const GameStateType stateNext)
 	pushState(stateNext);
 }
 
-void Game::popState()
+void Game::stateDrop()
 {
 	this->stateStack.drop();
 }
 
-void Game::pushState(const GameStateType stateNew)
+void Game::statePush(const GameStateType stateNew)
 {
 	/*
 	to:do : determine if this is this safe
