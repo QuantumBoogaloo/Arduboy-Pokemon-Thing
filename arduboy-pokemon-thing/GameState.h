@@ -1,18 +1,17 @@
 #pragma once
 
+#include "StateMachineInstructionType.h"
 #include "GameStateType.h"
 
 class GameState
 {
 protected:
-	GameStateType StateNext;
-	bool StateChanged = false;
+	StateMachineInstruction stateInstruction;
 public:
 	GameState() {}
 	~GameState() {}
 	virtual void update() {};
 	virtual void draw() {};
 	
-	bool stateChanged() const;
-	GameStateType stateNext() const;
+	GameStateType stateChangeCommand() const;
 };

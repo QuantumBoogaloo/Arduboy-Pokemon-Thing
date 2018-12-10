@@ -33,6 +33,8 @@ void StateMachine::update()
 	stateCurrent->update();
 	stateCurrent->draw();
 	
+	StateMachineInstruction stateInstruction = stateCurrent.stateChangeCommand();
+	
 	switch(stateInstruction.instruction)
 	{
 		case StateMachineInstructionType::Push:
@@ -54,7 +56,5 @@ void StateMachine::update()
 		default:
 		break;
 	}
-	
-	stateInstruction = StateMachineInstruction(StateMachineInstructionType::None, GameStateType::None);
 }
 
