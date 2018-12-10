@@ -18,3 +18,9 @@ void StateMachine::statePush(const GameStateType stateNew)
 	this->stateStack.push(state);
 }
 
+void StateMachine::stateDrop()
+{
+	delete this->stateStack[this->stateStack.getCount() - 1];
+	this->stateStack.drop();
+}
+

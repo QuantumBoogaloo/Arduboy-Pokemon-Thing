@@ -26,13 +26,4 @@ void Game::stateDropAll()
 	while(!this->stateStack.isEmpty())
 		stateDrop();
 }
-
-void Game::stateDrop()
-{
-	if(this->stateStack.isEmpty())
-		return;
-	delete this->stateStack[this->stateStack.getCount() - 1];
-	this->stateStack.drop();
-}
-
 }
