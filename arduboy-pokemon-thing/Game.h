@@ -7,6 +7,7 @@
 
 #include "MainMenuState.h"
 #include "StartupState.h"
+#include "StateMachine.h"
 
 class Game
 {
@@ -14,6 +15,7 @@ private:
 	Arduboy2 arduboy;
 	
 	Stack< GameState *, 4> stateStack;
+	StateMachine states;
 public:
 	void setup();
 	void loop();
