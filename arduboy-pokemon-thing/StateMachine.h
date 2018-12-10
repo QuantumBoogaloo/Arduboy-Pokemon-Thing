@@ -11,6 +11,13 @@
 class StateMachine
 {
 private:
+	static constexpr uint8_t StackSize = 4;
+	Stack <GameState *,StackSize> stateStack;
+	StateMachineInstruction stateInstruction;
+	
+	void statePush(const GameStateType stateNew);
 	void stateDrop();
 public:
+	StateMachine() {};
+	void update();
 };
