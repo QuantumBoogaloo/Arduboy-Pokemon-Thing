@@ -10,12 +10,7 @@ void Game::loop()
 	if(!arduboy.nextFrame())
 		return;
 	
-	if(this->stateStack.isEmpty())
-		statePush(GameStateType::Startup);
-	
-	auto & stateCurrent = this->stateStack[this->stateStack.getCount() - 1];
-	stateCurrent->update();
-	stateCurrent->draw();
+	states.update();
 	
 	arduboy.display();
 }

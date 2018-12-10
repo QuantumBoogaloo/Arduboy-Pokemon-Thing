@@ -24,3 +24,14 @@ void StateMachine::stateDrop()
 	this->stateStack.drop();
 }
 
+void StateMachine::update()
+{
+	if(this->stateStack.isEmpty())
+		statePush(GameStateType::Startup);
+	
+	auto & stateCurrent = this->stateStack[this->stateStack.getCount() - 1];
+	stateCurrent->update();
+	stateCurrent->draw();
+	
+}
+
