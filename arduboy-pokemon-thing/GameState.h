@@ -1,12 +1,12 @@
 #pragma once
 
-#include "StateMachine.h"
 #include "GameStateType.h"
 
 class GameState
 {
 protected:
-	StateMachine * states;
+	GameStateType StateNext;
+	bool StateChanged = false;
 public:
 	GameState() {}
 	~GameState() {}
