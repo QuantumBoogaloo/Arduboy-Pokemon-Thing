@@ -9,6 +9,7 @@ private:
 	Arduboy2 arduboy;
 	StateMachine states;
 public:
+	Game() {};
 	void setup();
 	void loop();
 };
