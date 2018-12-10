@@ -12,4 +12,7 @@ public:
 	~GameState() {}
 	virtual void update() {};
 	virtual void draw() {};
+	
+	bool stateChanged() const;
+	GameStateType stateNext() const;
 };
