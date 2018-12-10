@@ -14,11 +14,3 @@ void Game::loop()
 	
 	arduboy.display();
 }
-
-//States
-void Game::stateDropAll()
-{
-	while(!this->stateStack.isEmpty())
-		stateDrop();
-}
-}
