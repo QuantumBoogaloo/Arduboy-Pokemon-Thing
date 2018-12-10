@@ -33,5 +33,28 @@ void StateMachine::update()
 	stateCurrent->update();
 	stateCurrent->draw();
 	
+	switch(stateInstruction.instruction)
+	{
+		case StateMachineInstructionType::Push:
+			statePush(stateInstruction.state);
+		break;
+		case StateMachineInstructionType::Drop:
+			stateDrop();
+		break;		
+		case StateMachineInstructionType::Change:
+			stateDrop();
+			statePush(stateInstruction.state);
+		break;
+		case StateMachineInstructionType::DropAllPush:
+			while(!this->stateStack.isEmpty())
+				stateDrop();
+			statePush(stateInstruction.state);
+		break;
+		case StateMachineInstructionType::None:
+		default:
+		break;
+	}
+	
+	stateInstruction = StateMachineInstruction(StateMachineInstructionType::None, GameStateType::None);
 }
 
