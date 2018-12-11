@@ -9,6 +9,7 @@ void Game::loop()
 {
 	if(!arduboy.nextFrame())
 		return;
+	arduboy.pollButtons();
 	
 	states.update(arduboy);
 	
