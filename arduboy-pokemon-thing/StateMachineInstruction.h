@@ -2,7 +2,7 @@
 
 #include "GameStateType.h"
 
-enum class StateMachineInstructionType
+enum class StateMachineInstructionType : uint8_t
 {
 	None,
 	Push,
