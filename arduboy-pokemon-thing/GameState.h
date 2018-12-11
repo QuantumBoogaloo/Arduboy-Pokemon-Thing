@@ -9,7 +9,7 @@ protected:
 	StateMachineInstruction stateInstruction;
 public:
 	GameState() {}
-	~GameState() {}
+	virtual ~GameState() {}
 	virtual void update() {};
 	virtual void draw() {};
 	
