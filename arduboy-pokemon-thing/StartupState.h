@@ -3,6 +3,9 @@
 #include <Arduboy2.h>
 #include "GameState.h"
 
+#include "GameStateType.h"
+#include "StateMachineInstruction.h"
+
 class StartupState : public GameState
 {
 private:
