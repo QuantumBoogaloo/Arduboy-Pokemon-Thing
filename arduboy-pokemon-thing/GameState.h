@@ -16,4 +16,5 @@ public:
 	
 	StateMachineInstruction stateCommandGet() const;
 	void stateCommandReset();
+	void stateCommandSet(const StateMachineInstruction stateInstruction);
 };

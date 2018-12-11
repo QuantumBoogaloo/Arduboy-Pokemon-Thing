@@ -9,3 +9,8 @@ void GameState::stateCommandReset()
 {
 	this->stateInstruction = StateMachineInstruction();
 }
+
+void GameState::stateCommandSet(const StateMachineInstruction stateInstruction)
+{
+	this->stateInstruction = stateInstruction;
+}
