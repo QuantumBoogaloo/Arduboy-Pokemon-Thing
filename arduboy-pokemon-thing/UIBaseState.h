@@ -4,5 +4,6 @@
 
 class UIBaseState : public GameState
 {
-	
+protected:
+public:
 };
