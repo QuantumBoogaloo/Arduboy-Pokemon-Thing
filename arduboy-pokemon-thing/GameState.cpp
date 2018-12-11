@@ -1,11 +1,11 @@
 #include "GameState.h"
 
-bool GameState::stateChanged() const
+StateMachineInstruction GameState::stateCommandGet() const
 {
-	return this->StateChanged;
+	return this->stateInstruction;
 }
 
-GameStateType GameState::stateNext() const
+void GameState::stateCommandReset()
 {
-	return this->StateNext;
+	this->stateInstruction = StateMachineInstruction();
 }
