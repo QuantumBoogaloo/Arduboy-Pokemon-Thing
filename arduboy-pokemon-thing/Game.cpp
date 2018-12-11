@@ -10,7 +10,7 @@ void Game::loop()
 	if(!arduboy.nextFrame())
 		return;
 	
-	states.update();
+	states.update(arduboy);
 	
 	arduboy.display();
 }

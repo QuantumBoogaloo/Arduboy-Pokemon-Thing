@@ -1,5 +1,6 @@
 #pragma once
 
+#include <Arduboy2.h>
 #include "StateMachineInstruction.h"
 #include "GameStateType.h"
 
@@ -10,8 +11,8 @@ protected:
 public:
 	GameState() {}
 	virtual ~GameState() {}
-	virtual void update() {};
-	virtual void draw() {};
+	virtual void update(Arduboy2 & arduboy) {};
+	virtual void draw(Arduboy2 & arduboy) {};
 	
 	StateMachineInstruction stateCommandGet() const;
 	void stateCommandReset();

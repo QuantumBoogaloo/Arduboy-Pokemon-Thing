@@ -1,4 +1,5 @@
 #pragma once
+#include <Arduboy2.h>
 #include "Utilities/Stack.h"
 
 #include "GameStateType.h"
@@ -18,5 +19,5 @@ private:
 	void stateDrop();
 public:
 	StateMachine() {};
-	void update();
+	void update(Arduboy2 & arduboy);
 };

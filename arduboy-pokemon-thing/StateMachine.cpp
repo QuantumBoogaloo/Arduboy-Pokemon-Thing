@@ -24,14 +24,14 @@ void StateMachine::stateDrop()
 	this->stateStack.drop();
 }
 
-void StateMachine::update()
+void StateMachine::update(Arduboy2 & arduboy)
 {
 	if(this->stateStack.isEmpty())
 		statePush(GameStateType::Startup);
 	
 	auto & stateCurrent = this->stateStack[this->stateStack.getCount() - 1];
-	stateCurrent->update();
-	stateCurrent->draw();
+	stateCurrent->update(arduboy);
+	stateCurrent->draw(arduboy);
 	
 	StateMachineInstruction stateInstruction = stateCurrent->stateCommandGet();
 	stateCurrent->stateCommandReset();
