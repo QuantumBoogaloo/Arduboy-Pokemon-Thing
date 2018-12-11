@@ -1,6 +1,6 @@
 #pragma once
 
-#include "StateMachineInstructionType.h"
+#include "StateMachineInstruction.h"
 #include "GameStateType.h"
 
 class GameState
@@ -13,5 +13,6 @@ public:
 	virtual void update() {};
 	virtual void draw() {};
 	
-	GameStateType stateChangeCommand() const;
+	StateMachineInstruction stateCommandGet() const;
+	void stateCommandReset();
 };

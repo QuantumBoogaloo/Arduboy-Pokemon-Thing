@@ -16,7 +16,11 @@ struct StateMachineInstruction
 	StateMachineInstructionType instruction = StateMachineInstructionType::None;
 	GameStateType state = GameStateType::None;
 	
-	StateMachineInstruction() = default;
+	StateMachineInstruction()
+	{
+		this->instruction = StateMachineInstructionType::None;
+		this->state = GameStateType::None;
+	};
 	StateMachineInstruction(StateMachineInstructionType instruction) : instruction(instruction) {}
 	StateMachineInstruction(StateMachineInstructionType instruction, GameStateType state) : instruction(instruction), state(state) {}
 };

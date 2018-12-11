@@ -33,7 +33,8 @@ void StateMachine::update()
 	stateCurrent->update();
 	stateCurrent->draw();
 	
-	StateMachineInstruction stateInstruction = stateCurrent.stateChangeCommand();
+	StateMachineInstruction stateInstruction = stateCurrent->stateCommandGet();
+	stateCurrent->stateCommandReset();
 	
 	switch(stateInstruction.instruction)
 	{
@@ -56,5 +57,6 @@ void StateMachine::update()
 		default:
 		break;
 	}
+
 }
 
