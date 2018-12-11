@@ -9,6 +9,6 @@ private:
 public:
 	StartupState() {}
 	~StartupState() {}
-	void update(Arduboy2 & arduboy) {};
+	void update(Arduboy2 & arduboy);
 	void draw(Arduboy2 & arduboy);
 };
