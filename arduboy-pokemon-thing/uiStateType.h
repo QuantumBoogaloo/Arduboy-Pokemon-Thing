@@ -1,6 +1,6 @@
 #pragma once
 
-enum class uiStateType : uint8_t
+enum class UIStateType : uint8_t
 {
 	None,
 	Textbox,

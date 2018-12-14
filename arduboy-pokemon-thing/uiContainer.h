@@ -1,6 +1,6 @@
 #pragma once
 
-class uiContainer
+class UIContainer
 {
 private:
 public:
