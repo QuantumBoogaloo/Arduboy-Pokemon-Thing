@@ -3,6 +3,8 @@
 
 class Game
 {
-	private:
-	public:
+private:
+public:
+	void begin();
+	void update();
 };
