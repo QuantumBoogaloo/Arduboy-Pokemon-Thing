@@ -1,5 +1,6 @@
 #include "UIContainer.h"
 
+void UIContainer::push(const UIStateType type)
 {
 	UIObjectBase * object = nullptr;
 	
@@ -17,4 +18,10 @@ void UIContainer::dropAll(void)
 {
 	while(this->uiStack.getCount() > 0)
 		Drop();
+}
+
+UIObjectBase & UIContainer::top()
+{
+	//WILL BREAK when getCount() == 0
+	return *(this->uiStack[this->uiStack.getCount() - 1]);
 }

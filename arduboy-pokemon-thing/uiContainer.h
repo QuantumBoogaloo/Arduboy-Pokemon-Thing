@@ -14,4 +14,6 @@ public:
 	void push(const UIStateType type);
 	void drop();
 	void dropAll();
+	
+	UIObjectBase & top();
 };
