@@ -4,4 +4,6 @@ class UIObjectBase
 {
 private:
 public:
+	UIObjectBase() {}
+	virtual ~UIObjectBase() {}
 };
