@@ -15,5 +15,8 @@ public:
 	void drop();
 	void dropAll();
 	
+	uint8_t getCount() const;
+	bool isEmpty() const;
+	
 	UIObjectBase & top();
 };

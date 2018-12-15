@@ -30,6 +30,16 @@ void UIContainer::dropAll(void)
 		drop();
 }
 
+uint8_t UIContainer::getCount() const
+{
+	return this->uiStack.getCount();
+}
+
+bool UIContainer::isEmpty() const
+{
+	return (getCount() == 0);
+}
+
 UIObjectBase & UIContainer::top()
 {
 	//WILL BREAK when getCount() == 0
