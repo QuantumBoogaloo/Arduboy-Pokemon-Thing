@@ -2,6 +2,6 @@
 
 class UIObjectBase
 {
-private;
+private:
 public:
 };
