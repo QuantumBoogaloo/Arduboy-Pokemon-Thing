@@ -1,4 +1,7 @@
 #pragma once
+#include "UIContainer.h"
+
+class UIContainer;
 
 class UIObjectBase
 {
