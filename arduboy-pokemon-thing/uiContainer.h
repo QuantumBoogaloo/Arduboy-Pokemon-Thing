@@ -11,7 +11,7 @@ private:
 	static constexpr uint8_t stackSize = 4;
 	Stack<UIObjectBase *, stackSize> uiStack;
 public:
-	void Push(const UIStateType type);
-	void Drop();
-	void DropAll();
+	void push(const UIStateType type);
+	void drop();
+	void dropAll();
 };
