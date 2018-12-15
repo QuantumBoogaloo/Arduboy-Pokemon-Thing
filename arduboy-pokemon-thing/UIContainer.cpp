@@ -4,6 +4,16 @@ void UIContainer::push(const UIStateType type)
 {
 	UIObjectBase * object = nullptr;
 	
+	/*
+	switch(type)
+	{
+	case UIStateType::Textbox:
+	break;
+	default:
+	break;
+	}
+	*/
+	
 	if(object != nullptr)
 		this->uiStack.push(object);
 }
