@@ -1,6 +1,6 @@
 #pragma once
 
-class GameState
+class MainMenuState
 {
 protected:
 public:
