@@ -17,7 +17,7 @@ void UIContainer::drop(void)
 void UIContainer::dropAll(void)
 {
 	while(this->uiStack.getCount() > 0)
-		Drop();
+		drop();
 }
 
 UIObjectBase & UIContainer::top()
