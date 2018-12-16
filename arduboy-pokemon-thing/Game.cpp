@@ -26,6 +26,8 @@ void Game::update()
 	{
 		uiContainer.top().update(arduboy);
 		uiContainer.top().draw(arduboy);
+		
+		uiContainer.update();
 	}
 	
 	arduboy.setCursor(0,0);

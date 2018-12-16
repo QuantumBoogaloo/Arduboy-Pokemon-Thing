@@ -13,6 +13,8 @@ private:
 	Stack<UIObjectBase *, stackSize> uiStack;
 	Stack<UIStateType, stackSize> typeStack;
 public:
+	void update() {}
+	
 	void push(const UIStateType type);
 	void drop();
 	void dropAll();
