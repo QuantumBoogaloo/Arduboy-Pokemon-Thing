@@ -1,7 +1,11 @@
 #pragma once
+#include "GameStateBase.h"
 
-class MainMenuState
+class MainMenuState : public GameStateBase
 {
-protected:
+private:
 public:
+	void enter(UIContainer & uiContainer);
+	void update(Arduboy2 & arduboy, UIContainer & uiContainer);
+	void draw(Arduboy2 & arduboy);
 };
