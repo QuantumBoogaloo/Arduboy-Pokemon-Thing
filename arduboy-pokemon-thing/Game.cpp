@@ -28,6 +28,9 @@ void Game::update()
 		uiContainer.top().draw(arduboy);
 	}
 	
+	arduboy.setCursor(0,0);
+	arduboy.print(uiContainer.getCount());
+	
 	arduboy.display();
 }
 
@@ -47,4 +50,5 @@ void Game::changeState(const GameStateType nextState)
 		break;
 	}
 	
+	currentState = nextState;
 }
