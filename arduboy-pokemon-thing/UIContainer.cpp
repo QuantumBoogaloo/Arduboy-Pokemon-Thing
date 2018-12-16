@@ -61,11 +61,7 @@ size_t UIContainer::write(uint8_t letter)
 	if(isEmpty())
 		return 0;
 	
-	switch(topType())
-	{
-	default:
-	break;
-	}
-	
+	top().write(letter);
+
 	return 1;
 }
