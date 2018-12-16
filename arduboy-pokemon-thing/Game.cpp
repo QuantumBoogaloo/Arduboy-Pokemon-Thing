@@ -50,5 +50,10 @@ void Game::changeState(const GameStateType nextState)
 		break;
 	}
 	
+	if(state != nullptr)
+	{
+		state->enter(uiContainer);
+	}
+	
 	currentState = nextState;
 }
