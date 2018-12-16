@@ -47,11 +47,25 @@ bool UIContainer::isEmpty() const
 UIObjectBase & UIContainer::top()
 {
 	//WILL BREAK when getCount() == 0
-	return *(this->uiStack[this->uiStack.getCount() - 1]);
+	return *(this->uiStack[getCount() - 1]);
+}
+
 UIStateType UIContainer::topType()
 {
 	//WILL BREAK when getCount() == 0
 	return (this->typeStack[getCount() - 1]);
 }
 
+size_t UIContainer::write(uint8_t letter)
+{
+	if(isEmpty())
+		return 0;
+	
+	switch(topType())
+	{
+	default:
+	break;
+	}
+	
+	return 1;
 }
