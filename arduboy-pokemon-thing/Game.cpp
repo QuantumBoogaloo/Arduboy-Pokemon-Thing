@@ -24,7 +24,7 @@ void Game::update()
 	}
 	else
 	{
-		uiContainer.top().update(arduboy, uiContainer);
+		uiContainer.top().update(arduboy);
 		uiContainer.top().draw(arduboy);
 	}
 	

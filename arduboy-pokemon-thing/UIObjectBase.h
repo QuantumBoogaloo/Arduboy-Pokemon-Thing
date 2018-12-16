@@ -10,7 +10,7 @@ private:
 public:
 	UIObjectBase() {}
 	virtual ~UIObjectBase() {}
-	virtual void update(Arduboy2 & arduboy, UIContainer & uiContainer) {};
+	virtual void update(Arduboy2 & arduboy) {};
 	virtual void draw(Arduboy2 & arduboy) {};
 	virtual void write(uint8_t letter) {};
 };

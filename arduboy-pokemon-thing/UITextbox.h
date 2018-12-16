@@ -40,7 +40,7 @@ public:
 		return;
 	}
 
-	void update(Arduboy2 & arduboy, UIContainer & uiContainer)
+	void update(Arduboy2 & arduboy)
 	{
 		if(this->reveal < this->cursor)
 		{
