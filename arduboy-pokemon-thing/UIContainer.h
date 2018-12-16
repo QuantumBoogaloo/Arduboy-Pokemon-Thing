@@ -3,6 +3,7 @@
 #include "Utilities/Stack.h"
 #include "UIObjectBase.h"
 
+#include "UITextbox.h"
 #include "UIStateType.h"
 
 class UIContainer : public Print
