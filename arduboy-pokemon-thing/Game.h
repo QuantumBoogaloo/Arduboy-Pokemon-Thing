@@ -5,6 +5,8 @@
 #include "GameStateBase.h"
 #include "GameStateType.h"
 
+#include "MainMenuState.h"
+
 class Game
 {
 private:
@@ -17,4 +19,6 @@ private:
 public:
 	void begin();
 	void update();
+	
+	void changeState(const GameStateType nextState);
 };

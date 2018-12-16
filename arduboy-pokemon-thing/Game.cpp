@@ -11,6 +11,11 @@ void Game::update()
 		return;
 	arduboy.pollButtons();
 	
+	if ((state == nullptr) || (currentState != nextState))
+	{
+		changeState(nextState);
+	}
+	
 	arduboy.display();
 }
 
