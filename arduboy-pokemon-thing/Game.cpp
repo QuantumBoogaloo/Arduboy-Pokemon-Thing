@@ -7,5 +7,11 @@ void Game::begin()
 
 void Game::update()
 {
+	if(!arduboy.nextFrame())
+		return;
+	arduboy.pollButtons();
 	
+	arduboy.display();
+}
+
 }
