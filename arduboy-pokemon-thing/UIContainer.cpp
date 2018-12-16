@@ -48,4 +48,10 @@ UIObjectBase & UIContainer::top()
 {
 	//WILL BREAK when getCount() == 0
 	return *(this->uiStack[this->uiStack.getCount() - 1]);
+UIStateType UIContainer::topType()
+{
+	//WILL BREAK when getCount() == 0
+	return (this->typeStack[getCount() - 1]);
+}
+
 }

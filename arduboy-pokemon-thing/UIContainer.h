@@ -21,4 +21,5 @@ public:
 	
 	size_t write(uint8_t letter) override;
 	UIObjectBase & top();
+	UIStateType topType();
 };
