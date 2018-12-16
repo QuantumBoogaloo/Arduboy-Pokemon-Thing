@@ -15,13 +15,17 @@ void UIContainer::push(const UIStateType type)
 	*/
 	
 	if(object != nullptr)
+	{
+		this->typeStack.push(type);
 		this->uiStack.push(object);
+	}
 }
 
 void UIContainer::drop(void)
 {
 	delete this->uiStack[this->uiStack.getCount() - 1];
 	this->uiStack.drop();
+	this->typeStack.drop();
 }
 
 void UIContainer::dropAll(void)

@@ -10,6 +10,7 @@ class UIContainer
 private:
 	static constexpr uint8_t stackSize = 4;
 	Stack<UIObjectBase *, stackSize> uiStack;
+	Stack<UIStateType, stackSize> typeStack;
 public:
 	void push(const UIStateType type);
 	void drop();
