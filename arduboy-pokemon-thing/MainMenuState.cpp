@@ -2,8 +2,7 @@
 
 void MainMenuState::enter(UIContainer & uiContainer)
 {
-	uiContainer.push(UIStateType::Textbox);
-	
+	command = UICommand(UICommandType::Push, UIStateType::MainMenu);
 }
 
 void MainMenuState::update(Arduboy2 & arduboy, UIContainer & uiContainer)
