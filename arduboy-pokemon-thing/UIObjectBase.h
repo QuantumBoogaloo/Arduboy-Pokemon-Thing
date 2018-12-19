@@ -10,8 +10,13 @@ class UIObjectBase : public Print
 {
 protected:
 	UICommand command;
+	StandardMessageBuffer * messageBuffer;
 public:
-	UIObjectBase() {}
+	UIObjectBase(StandardMessageBuffer & messageBuffer)
+	{
+		this->messageBuffer = &messageBuffer;
+	}
+	
 	virtual ~UIObjectBase() {}
 	virtual void update(Arduboy2 & arduboy) {};
 	virtual void draw(Arduboy2 & arduboy) {};
