@@ -13,9 +13,22 @@ protected:
 public:
 	GameStateBase() {}
 	virtual ~GameStateBase() {}
-	virtual void enter(UIContainer & uiContainer) {};
-	virtual void update(Arduboy2 & arduboy, UIContainer & uiContainer) {};
-	virtual void draw(Arduboy2 & arduboy) {};
+	
+	virtual void enter(UIContainer & uiContainer)
+	{
+		static_cast<void>(uiContainer);
+	}
+	
+	virtual void update(Arduboy2 & arduboy, UIContainer & uiContainer)
+	{
+		static_cast<void>(arduboy);
+		static_cast<void>(uiContainer);
+	}
+	
+	virtual void draw(Arduboy2 & arduboy)
+	{
+		static_cast<void>(arduboy);
+	}
 		
 	UICommand & getCommand()
 	{
