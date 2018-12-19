@@ -43,26 +43,19 @@ bool UIContainer::isEmpty() const
 	return (getCount() == 0);
 }
 
-UIObjectBase & UIContainer::top()
 UIObjectBase & UIContainer::atIndex(const uint8_t index)
 {
 	//WILL BREAK when getCount() == 0
-	return *(this->uiStack[getCount() - 1]);
 	return *(this->uiStack[index]);
+}
+
+UIObjectBase & UIContainer::top()
+{
+	return atIndex(getCount() - 1);
 }
 
 UIStateType UIContainer::topType()
 {
 	//WILL BREAK when getCount() == 0
 	return (this->typeStack[getCount() - 1]);
-}
-
-size_t UIContainer::write(uint8_t letter)
-{
-	if(isEmpty())
-		return 0;
-	
-	top().write(letter);
-
-	return 1;
 }
