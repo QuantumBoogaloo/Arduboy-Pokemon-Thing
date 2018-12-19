@@ -2,6 +2,7 @@
 #include <Arduboy2.h>
 #include "UIContainer.h"
 
+#include "UIMessageBuffer.h"
 #include "GameStateType.h"
 #include "UIStateType.h"
 #include "UICommand.h"
@@ -11,6 +12,12 @@ class UIObjectBase : public Print
 protected:
 	UICommand command;
 	StandardMessageBuffer * messageBuffer;
+		
+	size_t write(uint8_t letter) override
+	{
+		messageBuffer->write(letter);
+		return 0;
+	}
 public:
 	UIObjectBase(StandardMessageBuffer & messageBuffer)
 	{
