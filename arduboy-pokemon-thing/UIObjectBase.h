@@ -17,6 +17,7 @@ public:
 		this->messageBuffer = &messageBuffer;
 	}
 	
+	UIObjectBase();
 	virtual ~UIObjectBase() {}
 	virtual void update(Arduboy2 & arduboy) {};
 	virtual void draw(Arduboy2 & arduboy) {};
