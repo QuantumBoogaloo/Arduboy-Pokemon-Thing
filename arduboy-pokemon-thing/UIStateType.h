@@ -4,5 +4,5 @@ enum class UIStateType : uint8_t
 {
 	None,
 	Textbox,
-	
+	MainMenu,
 };
