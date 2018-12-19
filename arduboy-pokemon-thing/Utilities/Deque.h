@@ -173,10 +173,10 @@ public:
 	bool prepend(const ValueType & item);
 
 	// O(1)
-	void unappend(void);
+	bool unappend(void);
 
 	// O(1)
-	void unprepend(void);
+	bool unprepend(void);
 	
 	// O(N)
 	bool removeFirst(const ValueType & item);
@@ -270,10 +270,10 @@ bool Deque<Type, Capacity>::prepend(const ValueType & item)
 
 // O(1)
 template< typename Type, uint8_t Capacity >
-void Deque<Type, Capacity>::unappend(void)
+bool Deque<Type, Capacity>::unappend(void)
 {
 	if (this->isEmpty())
-		return;
+		return false;
 
 	--this->next;
 	this->items[this->next].~ValueType();
@@ -282,10 +282,10 @@ void Deque<Type, Capacity>::unappend(void)
 
 // O(1)
 template< typename Type, uint8_t Capacity >
-void Deque<Type, Capacity>::unprepend(void)
+bool Deque<Type, Capacity>::unprepend(void)
 {
 	if (this->isEmpty())
-		return;
+		return false;
 
 	--this->next;
 	for (IndexType i = 0; i < this->next; ++i)
@@ -480,13 +480,15 @@ public:
 	}
 
 	// O(1)
-	constexpr void unappend(void)
+	constexpr bool unappend(void)
 	{
+		return false;
 	}
 
 	// O(1)
-	constexpr void unprepend(void)
+	constexpr bool unprepend(void)
 	{
+		return false;
 	}
 	
 	// O(N)

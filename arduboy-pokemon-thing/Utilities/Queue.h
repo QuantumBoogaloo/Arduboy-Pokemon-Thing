@@ -175,9 +175,9 @@ public:
 	}
 
 	// O(1)
-	void dequeue(void)
+	bool dequeue(void)
 	{
-		this->container.unprepend();
+		return this->container.unprepend();
 	}
 	
 	// O(N)
