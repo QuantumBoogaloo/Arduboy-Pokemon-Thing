@@ -26,14 +26,27 @@ public:
 	
 	UIObjectBase();
 	virtual ~UIObjectBase() {}
-	virtual void update(Arduboy2 & arduboy) {};
-	virtual void draw(Arduboy2 & arduboy) {};
-	virtual void writeChar(uint8_t letter) {};
+	
+	virtual void update(Arduboy2 & arduboy)
+	{
+		static_cast<void>(arduboy);
+	}
+	
+	virtual void draw(Arduboy2 & arduboy)
+	{
+		static_cast<void>(arduboy);
+	}
+	
+	virtual void writeChar(uint8_t letter)
+	{
+		static_cast<void>(letter);
+	}
 	
 	UICommand & getCommand()
 	{
 		return this->command;
 	}
+
 	void resetCommand()
 	{
 		this->command = UICommand();

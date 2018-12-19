@@ -175,9 +175,9 @@ public:
 	}
 
 	// O(1)
-	void drop(void)
+	bool drop(void)
 	{
-		this->container.unappend();
+		return this->container.unappend();
 	}
 	
 	// O(N)
