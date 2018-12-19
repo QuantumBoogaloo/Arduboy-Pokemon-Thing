@@ -2,7 +2,6 @@
 #include <Arduboy2.h>
 #include "UIContainer.h"
 
-class UIContainer;
 #include "GameStateType.h"
 #include "UIStateType.h"
 #include "UICommand.h"
