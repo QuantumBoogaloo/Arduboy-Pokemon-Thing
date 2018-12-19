@@ -12,3 +12,10 @@ enum class UICommandType
 	Change,
 };
 
+enum class UICommandTarget
+{
+	None,
+	State,
+	UI,
+};
+
