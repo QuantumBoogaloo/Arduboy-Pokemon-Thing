@@ -58,4 +58,42 @@ void Game::changeState(const GameStateType nextState)
 	}
 	
 	currentState = nextState;
+void Game::processCommand(UICommand & command)
+{
+	switch(command.getTarget())
+	{
+	case UICommandTarget::State:
+	{
+		//only supported command in state mode;
+		if(command.getCommand() == UICommandType::Change)
+		{
+			changeState(command.getStateReturn());
+		}
+	}
+	break;
+	case UICommandTarget::UI:
+	{
+		switch(command.getCommand())
+		{
+		case UICommandType::Drop:
+			uiContainer.drop();
+		break;
+		case UICommandType::Push:
+			uiContainer.push(command.getUIReturn());
+		break;
+		case UICommandType::DropAll:
+			uiContainer.dropAll();
+		break;
+		case UICommandType::Change:
+			uiContainer.drop();
+			uiContainer.push(command.getUIReturn());
+		break;
+		default:
+		break;
+		}
+	}
+	break;
+	default:
+	break;
+	}
 }
