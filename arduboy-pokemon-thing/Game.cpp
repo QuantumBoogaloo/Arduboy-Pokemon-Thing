@@ -28,10 +28,30 @@ void Game::update()
 		uiContainer.top().draw(arduboy);
 		
 		uiContainer.update();
+	UICommand command;
+	if(uiContainer.isEmpty())
+	{
+		state->update(arduboy, uiContainer);
+		command = state->getCommand();
+		state->resetCommand();
+	}
+	else
+	{
+		uiContainer.top().update(arduboy);
+		command = uiContainer.top().getCommand();
+		uiContainer.top().resetCommand();
 	}
 	
-	arduboy.setCursor(0,0);
-	arduboy.print(uiContainer.getCount());
+	arduboy.clear();
+	state->draw(arduboy);
+	
+	for(uint8_t i = 0; i < uiContainer.getCount(); ++i)
+	{
+		uiContainer.atIndex(i).draw(arduboy);
+	}
+	
+	processCommand(command);
+	uiContainer.update();
 	
 	arduboy.display();
 }
@@ -58,6 +78,8 @@ void Game::changeState(const GameStateType nextState)
 	}
 	
 	currentState = nextState;
+}
+
 void Game::processCommand(UICommand & command)
 {
 	switch(command.getTarget())
