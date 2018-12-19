@@ -23,6 +23,18 @@ void UIContainer::push(const UIStateType type)
 	}
 }
 
+void UIContainer::update()
+{
+	if(!messageBuffer.isEmpty())
+	{
+		for(uint8_t i = 0; i < messageBuffer.length(); ++i)
+		{
+			top().writeChar(messageBuffer[i]);
+		}
+	}
+	messageBuffer.clear();
+}
+
 void UIContainer::drop(void)
 {
 	delete this->uiStack[this->uiStack.getCount() - 1];
