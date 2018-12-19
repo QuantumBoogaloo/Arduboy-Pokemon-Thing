@@ -28,7 +28,8 @@ public:
 	virtual ~UIObjectBase() {}
 	virtual void update(Arduboy2 & arduboy) {};
 	virtual void draw(Arduboy2 & arduboy) {};
-	virtual void write(uint8_t letter) {};
+	virtual void writeChar(uint8_t letter) {};
+	
 	UICommand & getCommand()
 	{
 		return this->command;
