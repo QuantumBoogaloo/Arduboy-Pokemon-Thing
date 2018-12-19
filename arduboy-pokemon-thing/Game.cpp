@@ -16,18 +16,27 @@ void Game::update()
 		changeState(nextState);
 	}
 	
+	/*
+	UICommand command;
 	if(uiContainer.isEmpty())
 	{
 		arduboy.clear();
 		state->update(arduboy, uiContainer);
 		state->draw(arduboy);
+		
+		command = state->getCommand();
+		state->resetCommand();
 	}
 	else
 	{
 		uiContainer.top().update(arduboy);
 		uiContainer.top().draw(arduboy);
 		
-		uiContainer.update();
+		command = uiContainer.top().getCommand();
+		uiContainer.top().resetCommand();
+	}
+	*/
+	
 	UICommand command;
 	if(uiContainer.isEmpty())
 	{
