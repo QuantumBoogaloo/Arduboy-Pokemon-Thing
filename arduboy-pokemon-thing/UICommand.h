@@ -19,3 +19,9 @@ enum class UICommandTarget
 	UI,
 };
 
+class UICommand
+{
+private:
+public:
+};
+
