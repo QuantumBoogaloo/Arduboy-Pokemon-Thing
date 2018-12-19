@@ -2,13 +2,27 @@
 #include <Arduboy2.h>
 #include "UIContainer.h"
 
+#include "GameStateType.h"
+#include "UIStateType.h"
+#include "UICommand.h"
+
 class GameStateBase 
 {
-private:
+protected:
+	UICommand command;
 public:
 	GameStateBase() {}
 	virtual ~GameStateBase() {}
 	virtual void enter(UIContainer & uiContainer) {};
 	virtual void update(Arduboy2 & arduboy, UIContainer & uiContainer) {};
 	virtual void draw(Arduboy2 & arduboy) {};
+		
+	UICommand & getCommand()
+	{
+		return this->command;
+	}
+	void resetCommand()
+	{
+		this->command = UICommand();
+	}
 };
