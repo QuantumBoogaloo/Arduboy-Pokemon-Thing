@@ -6,7 +6,7 @@
 #include "UIStateType.h"
 #include "UICommand.h"
 
-class UIObjectBase
+class UIObjectBase : public Print
 {
 protected:
 	UICommand command;
