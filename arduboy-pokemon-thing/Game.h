@@ -1,6 +1,7 @@
 #pragma once
 #include <Arduboy2.h>
 
+#include "UICommand.h"
 #include "UIContainer.h"
 #include "GameStateBase.h"
 #include "GameStateType.h"
@@ -21,4 +22,5 @@ public:
 	void update();
 	
 	void changeState(const GameStateType nextState);
+	void processCommand(UICommand & command);
 };
