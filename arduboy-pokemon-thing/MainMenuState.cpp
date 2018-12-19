@@ -12,5 +12,5 @@ void MainMenuState::update(Arduboy2 & arduboy, UIContainer & uiContainer)
 
 void MainMenuState::draw(Arduboy2 & arduboy)
 {
-	arduboy.print("testing123");
+	
 }
