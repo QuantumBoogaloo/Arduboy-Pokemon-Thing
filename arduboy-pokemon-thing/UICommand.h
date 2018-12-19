@@ -53,5 +53,22 @@ public:
 		this->target = target;
 	}
 		
+	UICommandType getCommand(void) const
+	{
+		return this->command;
+	}
+	UICommandTarget getTarget(void) const
+	{
+		return this->target;
+	}
+	
+	UIStateType getUIReturn(void) const 
+	{
+		return data.uiData;
+	}
+	GameStateType getStateReturn(void) const
+	{
+		return data.stateData;
+	}
 };
 
