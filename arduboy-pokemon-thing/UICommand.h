@@ -24,6 +24,11 @@ class UICommand
 private:
 	UICommandType command = UICommandType::None;
 	UICommandTarget target = UICommandTarget::None;
+	union StateData
+	{
+		UIStateType uiData;
+		GameStateType stateData;
+	} data;
 public:
 };
 
