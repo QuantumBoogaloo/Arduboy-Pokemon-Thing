@@ -7,7 +7,10 @@ void UIContainer::push(const UIStateType type)
 	switch(type)
 	{
 	case UIStateType::Textbox:
-		object = new UITextbox();
+		object = new UITextbox(messageBuffer);
+	break;
+	case UIStateType::MainMenu:
+		object = new UIMainMenu(messageBuffer);
 	break;
 	default:
 	break;
