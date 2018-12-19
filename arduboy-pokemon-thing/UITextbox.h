@@ -1,6 +1,8 @@
 #pragma once
 
 #include "UIObjectBase.h"
+#include "UIMessageBuffer.h"
+#include "UICommand.h"
 
 class UITextbox : public UIObjectBase
 {
@@ -13,6 +15,8 @@ private:
 	uint8_t cursor = 0;
 	uint8_t reveal = 0;
 public:
+	UITextbox(StandardMessageBuffer & messageBuffer) : UIObjectBase(messageBuffer) {}
+	
 	void clear(void)
 	{
 		this->cursor = 0;
@@ -20,7 +24,7 @@ public:
 			text[i] = '\0';
 	}
 	
-	void write(uint8_t letter)
+	void writeChar(uint8_t letter)
 	{
 		if(this->cursor == 0)	//if writing new line, clear out old
 			clear();
@@ -48,7 +52,7 @@ public:
 		}
 		else if(arduboy.justPressed(A_BUTTON))
 		{
-			//signal self-destruct here
+			command = UICommand(UICommandType::Drop, UICommandTarget::UI);
 			this->cursor = 0;
 		}
 	}
