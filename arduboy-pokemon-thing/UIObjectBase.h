@@ -16,7 +16,7 @@ protected:
 	size_t write(uint8_t letter) override
 	{
 		messageBuffer->write(letter);
-		return 0;
+		return 1;
 	}
 public:
 	UIObjectBase(StandardMessageBuffer & messageBuffer)
