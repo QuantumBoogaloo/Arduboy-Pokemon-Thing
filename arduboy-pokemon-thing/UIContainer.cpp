@@ -44,9 +44,11 @@ bool UIContainer::isEmpty() const
 }
 
 UIObjectBase & UIContainer::top()
+UIObjectBase & UIContainer::atIndex(const uint8_t index)
 {
 	//WILL BREAK when getCount() == 0
 	return *(this->uiStack[getCount() - 1]);
+	return *(this->uiStack[index]);
 }
 
 UIStateType UIContainer::topType()

@@ -25,6 +25,7 @@ public:
 	uint8_t getCount() const;
 	bool isEmpty() const;
 	
+	UIObjectBase & atIndex(const uint8_t position);
 	UIObjectBase & top();
 	UIStateType topType();
 };
