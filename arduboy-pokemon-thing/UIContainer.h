@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Utilities/Stack.h"
+#include "UIMessageBuffer.h"
 #include "UIObjectBase.h"
 
 #include "UITextbox.h"
@@ -15,6 +16,7 @@ private:
 public:
 	void update() {}
 	
+	StandardMessageBuffer messageBuffer;
 	void push(const UIStateType type);
 	void drop();
 	void dropAll();
