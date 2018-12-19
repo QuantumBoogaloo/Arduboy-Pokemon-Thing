@@ -2,9 +2,9 @@
 Game game = Game();
 
 void setup() {
-	game.Begin();
+	game.begin();
 }
 
 void loop() {
-	game.Run();
+	game.update();
 }
