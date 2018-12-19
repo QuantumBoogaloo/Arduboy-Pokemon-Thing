@@ -22,6 +22,8 @@ enum class UICommandTarget
 class UICommand
 {
 private:
+	UICommandType command = UICommandType::None;
+	UICommandTarget target = UICommandTarget::None;
 public:
 };
 
