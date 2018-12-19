@@ -7,7 +7,7 @@
 #include "UITextbox.h"
 #include "UIStateType.h"
 
-class UIContainer : public Print
+class UIContainer 
 {
 private:
 	static constexpr uint8_t stackSize = 4;
@@ -24,7 +24,6 @@ public:
 	uint8_t getCount() const;
 	bool isEmpty() const;
 	
-	size_t write(uint8_t letter) override;
 	UIObjectBase & top();
 	UIStateType topType();
 };
